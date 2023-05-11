@@ -16,6 +16,15 @@
         <link rel="stylesheet" href="../css/hakkimda.css">
 </head>
 <body class="bg-dark">
+    <?php
+	    session_start(); // Session'ı başlat
+	    if(isset($_SESSION["sifre"])) {
+		    echo '<div class="alert alert-success" role="alert">';
+		    echo 'Hoş geldiniz ' . $_SESSION["sifre"] . '!';
+		    echo '</div>';
+		    unset($_SESSION["sifre"]); // Session'ı temizle
+	    }
+	?>
     <div class="container-sm container-box bg-light">
         <!-- navbar starts -->
         <div class="row header">
