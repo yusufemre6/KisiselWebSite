@@ -46,7 +46,7 @@
                                 <a class="nav-link pt-2 fs-5 text-dark" href="#">Memleketim</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="#">İletişim</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="iletisim.php">İletişim</a>
                             </li>
                             <li class="nav-item mx-3">
                                 <a class="nav-link text-dark icon-link icon-link-hover fs-5 " href="../php/login.php">
@@ -126,6 +126,12 @@
             </div>
         </div>        
         <!-- wrapper ends -->
+
+        <div class="row mt-5">
+            <div class="col text-end mx-5">
+                <a href="../php/ilgiAlanlarim.php" class="text-decoration-none text-dark border border-dark p-2">İlgi Alanlarım'a git <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
 
     </div>
     <!-- footer starts -->

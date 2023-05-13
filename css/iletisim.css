@@ -1,15 +1,11 @@
 *{
-    box-sizing: border-box;
-  }
-  
-  body{
-      min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .container-box{
-    flex: 1;
-  }
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+}
+
+.form{
+  width: 75%;
+}
