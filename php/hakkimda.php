@@ -19,7 +19,7 @@
     <?php
 	    session_start(); // Session'ı başlat
 	    if(isset($_SESSION["sifre"])) {
-		    echo '<div class="alert alert-success" role="alert">';
+		    echo '<div class="alert alert-success" role="alert" id="myDiv">';
 		    echo 'Hoş geldiniz ' . $_SESSION["sifre"] . '!';
 		    echo '</div>';
 		    unset($_SESSION["sifre"]); // Session'ı temizle

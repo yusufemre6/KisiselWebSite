@@ -61,12 +61,13 @@ if (isset($_POST['league'])) {
                     </div>
                     <div class="col-4">
                         <select class="form-select" name="league" id="league" aria-label="Default select example">
-                            <option selected>Ligler</option>
-                            <option value="PL">Premier League</option>
-                            <option value="BL1">Bundesliga</option>
-                            <option value="SA">Serie A</option>
-                            <option value="FL1">Ligue 1</option>
-                            <option value="PD">La Liga</option>
+                            <option <?php if(!empty($_POST['league']) && $_POST['league'] == 'Ligler'){echo "selected";} ?> value="Ligler">Ligler</option>
+                            <option <?php if(!empty($_POST['league']) && $_POST['league'] == 'PL'){echo "selected";} ?> value="PL">Premier League</option>
+                            <option <?php if(!empty($_POST['league']) && $_POST['league'] == 'BL1'){echo "selected";} ?> value="BL1">Bundesliga</option>
+                            <option <?php if(!empty($_POST['league']) && $_POST['league'] == 'SA'){echo "selected";} ?> value="SA">Serie A</option>
+                            <option <?php if(!empty($_POST['league']) && $_POST['league'] == 'FL1'){echo "selected";} ?> value="FL1">Ligue 1</option>
+                            <option <?php if(!empty($_POST['league']) && $_POST['league'] == 'PD'){echo "selected";} ?> value="PD">La Liga</option>
+                            <option <?php if(!empty($_POST['league']) && $_POST['league'] == 'ELC'){echo "selected";} ?> value="ELC ">Championship</option>
                         </select>
                     </div>
                     <div class="col-4">
@@ -79,7 +80,13 @@ if (isset($_POST['league'])) {
         <div class="row mt-5">
             <?php if (isset($standings)) echo $table; ?>
         </div>
+        <div class="row mt-5">
+            <div class="col text-start mx-5">
+                <a href="../php/hakkimda.php" class="text-decoration-none text-light border border-light p-2">İlgi Alanlarım'a git <i class="bi bi-chevron-double-left"></i></a>
+            </div>
+        </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>

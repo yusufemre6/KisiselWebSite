@@ -23,3 +23,9 @@ options.forEach(function(option,index) {
   });
 });
 
+setTimeout(function() {
+  var myDiv = document.getElementById("myDiv");
+  if (myDiv) {
+    myDiv.style.display = "none";
+  }
+}, 5000);
