@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Doğru kullanıcı adı ve şifre
 $dogruKullaniciAdi = "yusuf.yildiz8@ogr.sakarya.edu.tr";
 $dogruSifre = "b211210090";
@@ -7,19 +9,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Kullanıcı adı ve şifre post edildiğinde çalışacak kodlar
     $kullaniciAdi = $_POST["kullaniciAdi"];
     $sifre = $_POST["sifre"];
-    
+
     if ($kullaniciAdi == $dogruKullaniciAdi && $sifre == $dogruSifre) {
         // Doğru kullanıcı adı ve şifre, ana sayfaya yönlendir
-        session_start(); // Session'ı başlat
         $_SESSION["sifre"] = $sifre; // "sifre" adlı session değişkenine şifreyi ata
         header("Location: hakkimda.php");
         exit();
     } else {
-        // Yanlış kullanıcı adı veya şifre, hata mesajı ve login sayfasına yönlendir
-         echo "<script>window.alert('Kullanıcı adı veya şifre yanlış!');</script>";       
+        // Yanlış kullanıcı adı veya şifre, hata mesajını oturuma kaydet
+        $_SESSION["hataMesaji"] = "Kullanıcı adı veya şifre yanlış!";
+        header("Location: login.php"); // Sayfayı yenile
+        exit();
     }
 }
+
+// Hata mesajını kontrol et
+if (isset($_SESSION["hataMesaji"])) {
+    echo '<div class="alert alert-danger" role="alert" id="myDiv">';
+    echo $_SESSION["hataMesaji"];
+    echo '</div>';
+    unset($_SESSION["hataMesaji"]); // Hata mesajını oturumdan kaldır
+}                            
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,16 +55,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="#">Hakkımda</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../php/hakkimda.php">Hakkımda</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="#">Özgeçmişim</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../html/ozgecmisim.html">Özgeçmişim</a>
                             </li>
                             <li class="nav-item mx-3">
                                 <a class="nav-link pt-2 fs-5 text-dark" href="#">Memleketim</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link text-dark icon-link icon-link-hover fs-5 " href="../php/login.php">
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../php/iletisim.php">İletişim</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-dark icon-link icon-link-hover fs-5 " href="#">
                                     Giriş Yap 
                                     <i class="bi bi-box-arrow-in-right mb-2" aria-hidden="true"><use xlink:href="#arrow-right"></use></i>
                                 </a>
@@ -84,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input class="form-control" type="password" minlength="10" maxlength="10" name="sifre" id="sifre" required>
                                 <div class="invalid-feedback"> Lütfen şifrenizi giriniz</div>
                             </div>
-                            <input class="btn btn-dark w-100" type="submit" value="Giris Yap">
+                            <input class="btn btn-dark w-100" type="submit" value="Giris Yap" onclick="validateEmail()">
                         </form>
                     </div>
                 </div>
@@ -109,6 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </footer>
     </div>
     <!-- footer ends -->
+    <script src="../javascript/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script></body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script></body>
 </html>

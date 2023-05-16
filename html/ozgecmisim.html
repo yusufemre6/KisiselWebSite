@@ -11,6 +11,7 @@
 
 </head>
 <body class="bg-dark">
+    <!-- navbar and main inside -->
     <div class="container-sm bg-light container-box">
         <header class="row">
             <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 border-bottom">
@@ -22,7 +23,7 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="#">Hakkımda</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../php/hakkimda.php">Hakkımda</a>
                             </li>
                             <li class="nav-item mx-3">
                                 <a class="nav-link pt-2 fs-5 text-dark" href="#">Özgeçmişim</a>
@@ -31,7 +32,7 @@
                                 <a class="nav-link pt-2 fs-5 text-dark" href="#">Memleketim</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="#">İletişim</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../php/iletisim.php">İletişim</a>
                             </li>
                             <li class="nav-item mx-3">
                                 <a class="nav-link text-dark icon-link icon-link-hover fs-5 " href="../php/login.php">
@@ -44,60 +45,147 @@
                 </div>
             </nav>
         </header>
-        <header>
-            <h1>Yusuf Emre Yıldız</h1>
-        </header>
-        <main>
-            <section>
-                <h2>Hakkımda</h2>
-                <p>Merhaba, ben Yusuf Emre. Sakarya Üniversitesi bilgisayar mühendisliği 2.sınıf öğrencisiyim. Web geliştirme konusunda 1 yıldır kendimi geliştiriyorum ve çeşitli projeler çıkardım. Kendimi sürekli olarak geliştirme ve öğrenme peşindeyim.</p>
-            </section>
 
-            <section>
-                <h2>Eğitim Geçmişi</h2>
-                <article>
-                    <h3>İlkOkul</h3>
-                    <time datetime="2009-10-01">Ekim 2009 - Haziran 2013</time>
-                    <ul>
-                        <li>İlkokul öğrenimime İstanbul Sultanbeyli'de başladım.</li>
-                        <li>Zübeyde Hanım İlköğretim Okulu'nda 4 yıl eğitim gördüm.</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>OrtaOkul</h3>
-                    <time datetime="2013-10-01">Ekim 2013 - Haziran 2017</time>
-                    <ul>
-                        <li>Ortaokul öğrenimime de İstanbul Sultanbeyli'de devam ettim.</li>
-                        <li>Necip Fazıl İmam Hatip Ortaokulu'nda 4 yıl eğitim gördüm.</li>
-                        <li>5.sınıfta kendi çapımda yüzme yaptım ve yarışmalarda başarı elde ettim.</li>
-                        <li>Futbol hayatıma bu süreçte 6.sınıfta başladım ve okul kapsamında başarılar elde ettim.</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>Lise</h3>
-                    <time datetime="2017-10-01">Ekim 2017 - Haziran 2021</time>
-                    <ul>
-                        <li>Lİse öğrenimime de aynı şekilde İstanbul Sultanbeyli'de devam ettim.</li>
-                        <li>Sultanbeyli Anadolu Lisesi'nde 4 yıl eğitim gördüm.</li>
-                        <li>Tübitak çalışmalarında bulundu.</li>
-                        <li>Okul takımıyla futbolda başarılar elde ettim.</li>
-                        <li>Üniversite sınavına hazırlanma sürecimiz pandemi dönemine denk geldiği için son senemde okuldan uzak kaldım.</li>
-                        <li>Hazırlık döneminde 1 yıl Sınav Deshanesi'nde bulundum ve bana güzel şeyler kattılar.</li>
-                        <li>Bütün eğitmenlerimin katkısıyla Sakarya Üniversitesi bilgisayar mühendisliği bölümünü kazandım.</li>
-                        <li>Bu üniversiteyi kazanmadan önce MSÜ serüvenim bulundu. MSÜ mülakatlarına girmeye hak kazandım ve Ankara'da sağlık testi ve psikomotor testi de dahil olmak üzere mülakatları başarıyla geçtim. Yalova'da Hava Meydan Kuvvetleri'nde uçuş eğitimlerine katıldım ve oradaki stratejik planım ile eğitimi yarıda bırakıp sivilde devam etme kararı aldım.</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>Üniversite</h3>
-                    <time datetime="2021-10-01">Ekim 2021 - Şimdi</time>
-                    <ul>
-                    </ul>
-                </article>
-            </section>
+        <header class="row mt-3">
+            <div class="col">
+                <figure class="row align-items-center">
+                    <div class="col-3 text-center">
+                        <img src="../img/profile.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-9">
+                        <figcaption>
+                            <p>Adım: Yusuf Emre Yıldız</p>
+                            <p>Yaş: 20</p>
+                            <p>Statü: Öğrenci</p>
+                            <p>Okulu: Sakarya Üniversitesi</p>
+                        </figcaption>
+                    </div>
+                </figure>
+            </div>
+        </header>
+        <main class="row my-2">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <section>
+                            <h2 class="pb-1 border-bottom">Hakkımda</h2>
+                            <p>Merhaba, ben Yusuf Emre. Sakarya Üniversitesi bilgisayar mühendisliği 2.sınıf öğrencisiyim. Web geliştirme konusunda 1 yıldır kendimi geliştiriyorum ve çeşitli projeler çıkardım. Kendimi sürekli olarak geliştirme ve öğrenme peşindeyim.</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="border-bottom">Eğitim Geçmişi</h2>
+                    </div>
+                </div>
+                <section class="row">
+                    <div class="col py-2 border">
+                        <article>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="text-end">İlkOkul</h3>
+                                </div>
+                                <div class="col pt-2">
+                                    <time datetime="2009-10-01">Ekim 2009 - Haziran 2013</time>
+                                </div>
+                            </div>
+                            <ul class="my-3">
+                                <li>İlkokul öğrenimime İstanbul Sultanbeyli'de başladım.</li>
+                                <li>Zübeyde Hanım İlköğretim Okulu'nda 4 yıl eğitim gördüm.</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col py-2 border">
+                        <article>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="text-end">OrtaOkul</h3>
+                                </div>
+                                <div class="col pt-2">
+                                    <time datetime="2013-10-01">Ekim 2013 - Haziran 2017</time>
+                                </div>
+                            </div>
+                            <ul class="my-3">
+                                <li>Ortaokul öğrenimime de İstanbul Sultanbeyli'de devam ettim.</li>
+                                <li>Necip Fazıl İmam Hatip Ortaokulu'nda 4 yıl eğitim gördüm.</li>
+                                <li>5.sınıfta kendi çapımda yüzme yaptım ve yarışmalarda başarı elde ettim.</li>
+                                <li>Futbol hayatıma bu süreçte 6.sınıfta başladım ve okul kapsamında başarılar elde ettim.</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col py-2 border">
+                        <article>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="text-end">Lise</h3>
+                                </div>
+                                <div class="col pt-2">
+                                    <time datetime="2017-10-01">Ekim 2017 - Haziran 2021</time>
+                                </div>
+                            </div>
+                            <ul class="my-3">
+                                <li>Lİse öğrenimime de aynı şekilde İstanbul Sultanbeyli'de devam ettim.</li>
+                                <li>Sultanbeyli Anadolu Lisesi'nde 4 yıl eğitim gördüm.</li>
+                                <li>Tübitak çalışmalarında bulundu.</li>
+                                <li>Okul takımıyla futbolda başarılar elde ettim.</li>
+                                <li>Üniversite sınavına hazırlanma sürecimiz pandemi dönemine denk geldiği için son senemde okuldan uzak kaldım.</li>
+                                <li>Hazırlık döneminde 1 yıl Sınav Deshanesi'nde bulundum ve bana güzel şeyler kattılar.</li>
+                                <li>Bütün eğitmenlerimin katkısıyla Sakarya Üniversitesi bilgisayar mühendisliği bölümünü kazandım.</li>
+                                <li>Bu üniversiteyi kazanmadan önce MSÜ serüvenim bulundu. MSÜ mülakatlarına girmeye hak kazandım ve Ankara'da sağlık testi ve psikomotor testi de dahil olmak üzere mülakatları başarıyla geçtim. Yalova'da Hava Meydan Kuvvetleri'nde uçuş eğitimlerine katıldım ve oradaki stratejik planım ile eğitimi yarıda bırakıp sivilde devam etme kararı aldım.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>    
+                <section class="row">
+                    <div class="col border py-2">
+                        <article>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="text-end">Üniversite</h3>
+                                </div>
+                                <div class="col pt-2">
+                                    <time datetime="2021-10-01">Ekim 2021 - Şimdi</time>
+                                </div>
+                            </div>
+                            <ul class="my-3">
+                                <li>
+                                    2021'de bu bölüme başladım ve ilgimi geçen süreçte yazılım daha çok çekmeye başladı donanıma göre.
+                                </li>
+                                <li>
+                                    Veri bilimi, makine öğrenmesi, mobil programlama ve web programlama alanlarında kendimi denedim. Web programlama ve mobilde kendimi daha ilgili hissettim.
+                                </li>
+                                <li>
+                                    Şu anda kendimi node.js öğrenmekle meşgul tutuyorum. İlerleyen süreçte bootstrapte de kendimi daha da geliştirip gerekli şeylerle beraber full stack olmak istiyorum.
+                                </li>
+                                <li>
+                                    Mobil app yapmak da hoşuma gittiği için belki o tarafa yönelebilirim.
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section class="row my-5">
+                    <div class="col">
+                        <h2 class="border-bottom">Yetenekler</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>PHP(Temel Seviyede)</li>
+                            <li>PostgreSQL ve MsSql</li>
+                            <li>C# .Net Core</li>
+                            <li>Java</li>
+                            <li>Python(Temel Seviyede)</li>
+                            <li>C++ ile Veri Yapıları</li>
+                        </ul>
+                    </div>
+            </div>
         </main>
     </div>
+    <!-- ends -->
+
     <!-- footer starts -->
-    <div class="container-sm footer bg-light">
+    <div class="container-sm bg-light">
         <footer class="d-flex flex-wrap justify-content-between align-items-center border-top py-3">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
@@ -106,10 +194,10 @@
                 <span class=" mb-md-0 text-body-secondary">© 2023 Personal, Inc</span>
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-4 pe-1">
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-instagram fs-5"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-twitter fs-5"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-linkedin fs-5"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-github fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/yusufemre6_/" target="_blank"><i class="bi bi-instagram fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/YusufEmre6_" target="_blank"><i class="bi bi-twitter fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/yusuf-emre-y%C4%B1ld%C4%B1z-a8227b248/" target="_blank"><i class="bi bi-linkedin fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://github.com/yusufemre6" target="_blank"><i class="bi bi-github fs-5"></i></a></li>
             </ul>
         </footer>
     </div>

@@ -40,7 +40,7 @@
                                 <a class="nav-link pt-2 fs-5 text-dark" href="#">Hakkımda</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="#">Özgeçmişim</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../html/ozgecmisim.html">Özgeçmişim</a>
                             </li>
                             <li class="nav-item mx-3">
                                 <a class="nav-link pt-2 fs-5 text-dark" href="#">Memleketim</a>
@@ -126,13 +126,59 @@
             </div>
         </div>        
         <!-- wrapper ends -->
-
-        <div class="row mt-5">
+        <div class="row mt-4">
             <div class="col text-end mx-5">
                 <a href="../php/ilgiAlanlarim.php" class="text-decoration-none text-dark border border-dark p-2">İlgi Alanlarım'a git <i class="bi bi-chevron-double-right"></i></a>
             </div>
         </div>
-
+        <div class="row my-5">
+            <div class="col-md">
+                <div class="card shadow-sm">
+                    <img class="img-fluid card-img-top bd-placeholder-img" src="../img/GS.jpg"></img>
+                    <div class="card-body">
+                        <p class="card-text">Futbol branşı, Galatasaray'ın en tanınmış ve popüler dalıdır. Galatasaray Futbol Takımı, Türk futbolunun en başarılı takımlarından biridir. Kulüp, Türkiye Süper Lig'de birçok şampiyonluk elde etmiştir ve Türk futbolunda önemli bir yer edinmiştir. Ayrıca, 2000 yılında UEFA Kupası'nı kazanarak Türk futbol tarihinde büyük bir başarı elde etmiştir.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-body-secondary">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card shadow-sm">
+                    <img class="img-fluid card-img-top bd-placeholder-img" src="../img/coding-js.jpeg"></img>
+                    <div class="card-body">
+                        <p class="card-text">Kodlama, bir programlama dilini kullanarak belirli bir algoritmayı veya işlemi ifade etmek için semboller, sözcükler ve kurallar kullanmayı içerir. Bu semboller ve sözcükler, bilgisayarın anlayabileceği şekilde düzenlenir ve işlenir. Bir programlama dilindeki kod, bilgisayara hangi işlemleri yapması gerektiğini söyleyen bir talimat setidir.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-body-secondary">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                <img class="img-fluid card-img-top bd-placeholder-img" src="../img/Organik-Tarim-Urunleri-Karaoklar-Ciftligi-01.jpg" height="1000px"></img>
+                    <div class="card-body">
+                        <p class="card-text">Tarım, çeşitli bitkilerin yetiştirilmesini içerir. Bu bitkiler, gıda üretimi için tahıllar, sebzeler, meyveler, yağlı tohumlar ve baklagiller gibi farklı kategorilere ayrılabilir. Tarım ayrıca endüstriyel amaçlarla kullanılan bitkilerin (örneğin pamuk, keten, kenevir) ve süs bitkilerinin (örneğin çiçekler) yetiştirilmesini de kapsar.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-body-secondary">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
     </div>
     <!-- footer starts -->
     <div class="container-sm footer bg-light">
@@ -144,10 +190,10 @@
                 <span class=" mb-md-0 text-body-secondary">© 2023 Personal, Inc</span>
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-4 pe-1">
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-instagram fs-5"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-twitter fs-5"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-linkedin fs-5"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-github fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/yusufemre6_/" target="_blank"><i class="bi bi-instagram fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/YusufEmre6_" target="_blank"><i class="bi bi-twitter fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/yusuf-emre-y%C4%B1ld%C4%B1z-a8227b248/" target="_blank"><i class="bi bi-linkedin fs-5"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://github.com/yusufemre6" target="_blank"><i class="bi bi-github fs-5"></i></a></li>
             </ul>
         </footer>
     </div>

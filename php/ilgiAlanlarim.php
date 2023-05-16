@@ -82,7 +82,7 @@ if (isset($_POST['league'])) {
         </div>
         <div class="row mt-5">
             <div class="col text-start mx-5">
-                <a href="../php/hakkimda.php" class="text-decoration-none text-light border border-light p-2">İlgi Alanlarım'a git <i class="bi bi-chevron-double-left"></i></a>
+                <a href="../php/hakkimda.php" class="text-decoration-none text-light border border-light p-2">Hakkımda'ya git <i class="bi bi-chevron-double-left"></i></a>
             </div>
         </div>
     </div>
