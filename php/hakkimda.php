@@ -15,7 +15,7 @@
         <link rel="icon" type="image/x-icon" href="../img/person.svg">
         <link rel="stylesheet" href="../css/hakkimda.css">
 </head>
-<body class="bg-dark">
+<body class="bg-light">
     <?php
 	    session_start(); // Session'ı başlat
 	    if(isset($_SESSION["sifre"])) {

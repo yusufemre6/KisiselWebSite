@@ -43,7 +43,7 @@ if (isset($_SESSION["hataMesaji"])) {
     <link rel="stylesheet" href="../css/login.css">
 </head>
 
-<body class="bg-dark">
+<body class="bg-light">
     <div class="container-sm container-box bg-light">
         <div class="row">
             <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 border-bottom">

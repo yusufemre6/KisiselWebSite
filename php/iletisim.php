@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="../img/send.svg">
     <link rel="stylesheet" href="../css/iletisim.css">
 </head>
-<body class="bg-light">
+<body class="bg-dark">
     <div class="container-sm bg-dark">
         <div class="row row-1">
             <div class="col-12">
