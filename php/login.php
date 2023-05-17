@@ -61,10 +61,10 @@ if (isset($_SESSION["hataMesaji"])) {
                                 <a class="nav-link pt-2 fs-5 text-dark" href="../html/ozgecmisim.html">Özgeçmişim</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="#">Memleketim</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../html/memleketim.html">Memleketim</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link pt-2 fs-5 text-dark" href="../php/iletisim.php">İletişim</a>
+                                <a class="nav-link pt-2 fs-5 text-dark" href="../html/iletisim.html">İletişim</a>
                             </li>
                             <li class="nav-item mx-3">
                                 <a class="nav-link text-dark icon-link icon-link-hover fs-5 " href="#">

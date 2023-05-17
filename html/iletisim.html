@@ -24,13 +24,13 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item mx-3">
-                                    <a class="nav-link pt-2 fs-5 text-light" href="hakkimda.php">Hakkımda</a>
+                                    <a class="nav-link pt-2 fs-5 text-light" href="../php/hakkimda.php">Hakkımda</a>
                                 </li>
                                 <li class="nav-item mx-3">
-                                    <a class="nav-link pt-2 fs-5 text-light" href="#">Özgeçmişim</a>
+                                    <a class="nav-link pt-2 fs-5 text-light" href="ozgecmisim.html">Özgeçmişim</a>
                                 </li>
                                 <li class="nav-item mx-3">
-                                    <a class="nav-link pt-2 fs-5 text-light" href="#">Memleketim</a>
+                                    <a class="nav-link pt-2 fs-5 text-light" href="memleketim.html">Memleketim</a>
                                 </li>
                                 <li class="nav-item mx-3">
                                     <a class="nav-link pt-2 fs-5 text-light" href="#">İletişim</a>
@@ -49,19 +49,19 @@
         </div>
         <div class="row row-2">
             <div class="col-12 d-flex align-items-center justify-content-center px-0">
-                <form action="" class="form-communication mx-1">
+                <form method="post" action="../php/mesaj.php" class="form-communication mx-1" onsubmit="return validateForm()">
                     <div class="container border border-light rounded-4">
                         <div class="row px-3 my-3">
                             <div class="col-sm-6 px-0">
                                 <div class="form-floating px-1">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Adınız</label>
+                                    <input type="text" class="form-control" name="isim" id="isim" placeholder="name@example.com">
+                                    <label for="nameInput">Adınız</label>
                                 </div>
                             </div>
                             <div class="col-sm-6 px-0">
                                 <div class="form-floating px-1">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Soyadınız</label>
+                                    <input type="text" class="form-control" name="soyisim" id="soyisim" placeholder="name@example.com">
+                                    <label for="lastNameInput">Soyadınız</label>
                                 </div>
                             </div>
                         </div>
@@ -73,16 +73,16 @@
                                 <div class="row">
                                     <div class="col text-light">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="cinsiyet" id="erkek" value="Erkek">
+                                            <label class="form-check-label" for="erkek">
                                                 Erkek
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col text-light">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                            <label class="form-check-label" for="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="cinsiyet" id="kadın" value="Kadın">
+                                            <label class="form-check-label" for="kadın">
                                                 Kadın
                                             </label>
                                         </div>
@@ -92,11 +92,11 @@
                         </div>
                         <div class="row my-3 px-3">
                             <div class="col px-0 text-light ">
-                                <p class="mt-2">Mesaj İletim Çeşidi:</p>
+                                <label class="mt-1" for="iletisim-tercihi">İletişim Tercihiniz:</label>
                             </div>
                             <div class="col px-0 text-light">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Mesaj İletim Çeşidi Seçiniz</option>
+                                <select class="form-select" aria-label="Default select example" id="iletisim-tercihi" name="iletisim-tercihi">
+                                    <option value="">İletişim Tercihinizi Seçin</option>
                                     <option value="Email">Email</option>
                                     <option value="Sms">Sms</option>
                                 </select>
@@ -104,25 +104,25 @@
                         </div>
                         <div class="row my-3 px-3">
                             <div class="col-4 px-0 text-light">
-                                <label for="customRange3" class="form-label">Yaşınız(18-30):</label>
+                                <label for="yas" class="form-label">Yaşınız(18-30):</label>
                             </div>
                             <div class="col-8 px-0 text-light">
-                                <input type="range" class="form-range border rounded-4 " min="18" max="30" step="1" id="customRange3">
+                                <input type="range" class="form-range border rounded-4 " min="18" max="30" step="1" name="yas" id="yas" value="18">
                             </div>
                         </div>
                         <div class="row my-3 px-3">
                             <div class="col px-0 text-light">
                                 <div class="form-floating"px-1>
-                                    <textarea class="form-control" maxlength="1000" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                                    <label class="text-dark" for="floatingTextarea2">Mesajınızı buraya bırakınız...</label>
+                                    <textarea class="form-control" maxlength="1000" placeholder="Leave a comment here" name="mesaj-kutusu" id="mesaj-kutusu" style="height: 100px"></textarea>
+                                    <label class="text-dark" for="mesaj-kutusu">Mesajınızı buraya bırakınız...</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row my-3 px-3">
                            <div class="col px-0 text-light">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="" name="onay" id="onay">
+                                <label class="form-check-label" for="onay">
                                     Mesajımı kontrol ettim onaylıyorum
                                 </label>
                             </div>
@@ -130,12 +130,11 @@
                         </div>
                         <div class="row my-3 px-3">
                             <div class="col-6 px-0 text-light">
-                                <button type="button" class="btn btn-light">Gönder</button>
+                                <button type="submit" class="btn btn-light">Gönder</button>
                             </div>
                             <div class="col-6 px-0 text-light">
-                                <button type="button" class="btn btn-primary">Temizle</button>
+                                <button type="reset" class="btn btn-primary">Formu Temizle</button>
                             </div>
-                            
                         </div>
                     </div>
                 </form>
