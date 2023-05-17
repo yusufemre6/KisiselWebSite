@@ -54,3 +54,8 @@ function validateForm() {
   }
 }
 
+function clearForm() {
+  var form = document.getElementById("loginForm"); // formun id'sine uygun şekilde değiştirin
+  form.reset();
+}
+
