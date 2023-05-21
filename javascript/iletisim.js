@@ -16,46 +16,53 @@
 //form elemanları kontrolleri
 
 function validateForm() {
-  var ad = document.getElementById("isim").value;
-  var soyad = document.getElementById("soyisim").value;
-  var cinsiyet = document.querySelector('input[name="cinsiyet"]:checked');
-  var yas = document.getElementById("yas").value;
-  var iletisim = document.getElementById("iletisim-tercihi").value;
-  var mesaj = document.getElementById("mesaj-kutusu").value;
-  var kabul = document.getElementById("onay").checked;
+  var ad = $("#isim").val();
+  var soyad = $("#soyisim").val();
+  var cinsiyet = $('input[name="cinsiyet"]:checked').val();
+  var yas = $("#yas").val();
+  var iletisim = $("#iletisim-tercihi").val();
+  var mesaj = $("#mesaj-kutusu").val();
+  var kabul = $("#onay").prop("checked");
 
   if (!ad) {
     alert("Lütfen adınızı giriniz!");
     return false;
   }
-  else if(!soyad){
+  else if (!soyad){
     alert("Lütfen soyadınızı giriniz!");
     return false;
   }
-  else if(!cinsiyet){
+  else if (!cinsiyet){
     alert("Lütfen cinsiyetinizi seçiniz!");
     return false;
   }
-  else if(!yas){
+  else if (!yas){
     alert("Lütfen yaşınızı belirleyiniz!");
     return false;
   }
-  else if(!iletisim){
+  else if (!iletisim){
     alert("Lütfen iletişim türünü seçiniz!");
     return false;
   }
-  else if(!mesaj){
+  else if (!mesaj){
     alert("Lütfen mesajınızı yazın!");
     return false;
   }
-  else if(!kabul){
+  else if (!kabul){
     alert("Mesajınızı göndermek için onaylayın!!!");
     return false;
   }
 }
 
-function clearForm() {
-  var form = document.getElementById("loginForm"); // formun id'sine uygun şekilde değiştirin
-  form.reset();
-}
+
+$(document).ready(function() {
+  // Temizleme butonuna tıklandığında formu temizle
+  $("#clearButton").click(function(event) {
+    event.preventDefault(); // Butona tıklamayı engelle
+    
+    // Formdaki değerleri sıfırla
+    $("#myForm")[0].reset();
+  });
+});
+
 
